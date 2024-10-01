@@ -33,7 +33,7 @@ public class NFStatusServicoConsultaRetorno extends DFBase {
     @Element(name = "cUF")
     private DFUnidadeFederativa uf;
     
-    @Element(name = "dhRecbto")
+    @Element(name = "dhRecbto", required = false)
     private ZonedDateTime dataRecebimento;
 
     @Element(name = "dhRetorno", required = false)
