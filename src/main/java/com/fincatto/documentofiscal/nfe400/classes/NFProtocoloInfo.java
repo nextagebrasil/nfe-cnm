@@ -15,7 +15,10 @@ public class NFProtocoloInfo extends DFBase {
 
     @Attribute(name = "Id", required = false)
     private String identificador;
-    
+
+    @Attribute(name = "id", required = false)
+    private String id;
+
     @Element(name = "tpAmb")
     private DFAmbiente ambiente;
     
@@ -90,6 +93,7 @@ public class NFProtocoloInfo extends DFBase {
         return this.chave;
     }
 
+
     public LocalDateTime getDataRecebimento() {
         try {
             return LocalDateTime.parse(this.dataRecebimento, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"));
@@ -140,5 +144,13 @@ public class NFProtocoloInfo extends DFBase {
 
     public void setMensagem(String mensagem) {
         this.mensagem = mensagem;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
